@@ -18,12 +18,12 @@ const HomeScreen = () => {
           tabBarShowLabel: false,
           tabBarStyle :{
             backgroundColor: '#F2A54A',
-            height: 64,
+            height: '10%',
           }
          }}>
         <Tab.Screen name="History" component={HistoryTab} options={{
           tabBarIcon : ({focused}) =>(
-            <View style={{alignItems: 'center'}}>
+            <View style={{alignItems: 'center',paddingTop:10,paddingBottom:10}}>
               <Image source={HtrIcon} styles={{}} />
               <Text style={{fontSize:10,color :'#FFFFFF'}}> Gần đây</Text>
             </View>
@@ -32,7 +32,7 @@ const HomeScreen = () => {
         <Tab.Screen name="Contact" component={ContactTab}  
         options={{
           tabBarIcon : ({focused}) =>(
-            <View style={{alignItems: 'center'}}>
+            <View style={{alignItems: 'center',paddingTop:10,paddingBottom:10}}>
               <Image source={CtIcon} styles={{}} />
               <Text style={{fontSize:10,color :'#FFFFFF'}}> Danh bạ</Text>
             </View>
