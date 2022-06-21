@@ -21,7 +21,7 @@ const collections = [
 const MenuDrawer = props => {
   return (
     <View style={styles.container}>
-      <DrawerContentScrollView {...props}>
+      
         <View style={styles.drawerheader}>
           <View style={{flexDirection: 'row', position: 'absolute', bottom: 0}}>
             <Image
@@ -83,7 +83,7 @@ const MenuDrawer = props => {
             ))}
           </View>
         </View>
-      </DrawerContentScrollView>
+      
     </View>
   );
 };
