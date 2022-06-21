@@ -1,5 +1,12 @@
 import React from 'react';
-import {StyleSheet, Text, View, Image,  TouchableOpacity,Alert} from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  TouchableOpacity,
+  Alert,
+} from 'react-native';
 import GroupImg from '../assets/img/group.png';
 import ChildImg from '../assets/img/childimg.png';
 import LoadImg from '../assets/img/loading.png';
@@ -12,26 +19,51 @@ const LoginScreen = ({navigation}) => {
         <Image source={ChildImg} style={styles.childimg} />
       </View>
       <View style={styles.box2}>
-        <Text style={styles.appname}>Base contact</Text>
-        <Text style={styles.appdescription}>Giải pháp quản lý công việc</Text>
-        <Text style={styles.appdescription}>
-          & dự án toàn diện cho doanh nghiệp 4.0
-        </Text>
-        <Image source={LoadImg} style={styles.loadimg} />
-        <Text style={styles.loginnoti}>Bạn chưa đăng nhập</Text>
-        <TouchableOpacity  style={ { width:'80%' }} onPress={() => {
-            navigation.navigate('DefaultScreen');
-        }}>
-          <View style={styles.loginbtn}>
-          <Text  style={{ color:'#FFFFFF',marginLeft : 'auto',marginRight : 'auto' }}>ĐĂNG NHẬP BẰNG BASEACCOUT</Text>
-          </View>
-        </TouchableOpacity>
-        <TouchableOpacity style={{  width:'80%' }} onPress={() => {
-            navigation.navigate('DefaultScreen');}}>
-          <View style={styles.defaultbtn}>
-          <Text  style={{ color:'#F2A54A',marginLeft : 'auto',marginRight : 'auto' }}>ĐĂNG NHẬP THỦ CÔNG</Text>
-          </View>
-        </TouchableOpacity>
+        <View style={{flex: 1, alignItems: 'center'}}>
+          <Text style={styles.appname}>Base contact</Text>
+          <Text style={styles.appdescription}>Giải pháp quản lý công việc</Text>
+          <Text style={styles.appdescription}>
+            & dự án toàn diện cho doanh nghiệp 4.0
+          </Text>
+        </View>
+        <View style={{flex: 2, justifyContent: 'center', alignItems: 'center'}}>
+          <Image source={LoadImg} style={styles.loadimg} />
+        </View>
+        <View style={{flex: 2,alignItems: 'center',width:'100%'}}>
+          <Text style={styles.loginnoti}>Bạn chưa đăng nhập</Text>
+          <TouchableOpacity
+            style={{width: '80%'}}
+            onPress={() => {
+              navigation.navigate('DefaultScreen');
+            }}>
+            <View style={styles.loginbtn}>
+              <Text
+                style={{
+                  color: '#FFFFFF',
+                  marginLeft: 'auto',
+                  marginRight: 'auto',
+                }}>
+                ĐĂNG NHẬP BẰNG BASEACCOUT
+              </Text>
+            </View>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={{width: '80%'}}
+            onPress={() => {
+              navigation.navigate('DefaultScreen');
+            }}>
+            <View style={styles.defaultbtn}>
+              <Text
+                style={{
+                  color: '#F2A54A',
+                  marginLeft: 'auto',
+                  marginRight: 'auto',
+                }}>
+                ĐĂNG NHẬP THỦ CÔNG
+              </Text>
+            </View>
+          </TouchableOpacity>
+        </View>
       </View>
     </View>
   );
@@ -49,7 +81,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   childimg: {
-   bottom: -60,
+    bottom: -60,
     width: 200,
     height: 200,
     marginLeft: 'auto',
@@ -89,24 +121,24 @@ const styles = StyleSheet.create({
   loginbtn: {
     width: '100%',
     height: 48,
-    backgroundColor:'#F2A54A',
+    backgroundColor: '#F2A54A',
     fontSize: 15,
     fontWeight: '500',
-    justifyContent:'center',
-    borderRadius:4,
+    justifyContent: 'center',
+    borderRadius: 4,
     marginBottom: 10,
   },
-  defaultbtn:{
+  defaultbtn: {
     width: '100%',
     height: 48,
-    backgroundColor:'#FFFFFF',
+    backgroundColor: '#FFFFFF',
     fontSize: 15,
     fontWeight: '500',
-    justifyContent:'center',
-    borderRadius:4,
+    justifyContent: 'center',
+    borderRadius: 4,
     borderWidth: 1,
-    borderColor: "#F2A54A",
-  }
+    borderColor: '#F2A54A',
+  },
 });
 
 export default LoginScreen;
