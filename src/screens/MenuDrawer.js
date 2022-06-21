@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, View, Text, Image} from 'react-native';
+import {StyleSheet, View, Text, Image, SafeAreaView} from 'react-native';
 import Avartar from '../assets/img/avartar.png';
 import NewIc from '../assets/img/new.png';
 import PlayIc from '../assets/img/Play.png';
@@ -83,7 +83,6 @@ const MenuDrawer = props => {
             ))}
           </View>
         </View>
-      
     </View>
   );
 };

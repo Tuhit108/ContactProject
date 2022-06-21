@@ -5,7 +5,7 @@ import {
   View,
   Image,
   TouchableOpacity,
-  Alert,
+  SafeAreaView,
 } from 'react-native';
 import GroupImg from '../assets/img/group.png';
 import ChildImg from '../assets/img/childimg.png';
@@ -13,7 +13,7 @@ import LoadImg from '../assets/img/loading.png';
 
 const LoginScreen = ({navigation}) => {
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <View style={styles.box1}>
         <Image source={GroupImg} style={styles.group63img} />
         <Image source={ChildImg} style={styles.childimg} />
@@ -29,7 +29,7 @@ const LoginScreen = ({navigation}) => {
         <View style={{flex: 2, justifyContent: 'center', alignItems: 'center'}}>
           <Image source={LoadImg} style={styles.loadimg} />
         </View>
-        <View style={{flex: 2,alignItems: 'center',width:'100%'}}>
+        <View style={{flex: 2, alignItems: 'center', width: '100%'}}>
           <Text style={styles.loginnoti}>Bạn chưa đăng nhập</Text>
           <TouchableOpacity
             style={{width: '80%'}}
@@ -65,7 +65,7 @@ const LoginScreen = ({navigation}) => {
           </TouchableOpacity>
         </View>
       </View>
-    </View>
+    </SafeAreaView>
   );
 };
 const styles = StyleSheet.create({
